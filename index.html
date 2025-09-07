@@ -25,21 +25,30 @@
         <label>Altura (cm):</label>
         <input type="number" id="altura" placeholder="Ex: 80" /><br />
 
+        <label>Preço MDF por m² (R$):</label>
+        <input type="number" id="precoMdf" placeholder="Ex: 350" />
+
+        <label>Custo das Ferragens (R$):</label>
+        <input type="number" id="ferragensBase" placeholder="Ex: 400" />
+
+        <label>Lucro (%):</label>
+        <input type="number" id="lucro" placeholder="Ex: 30" />
+
         <label>MDF:</label>
         <br />
         <div class="radio-group">
           <span
             ><input type="radio" name="mdf" value="1.0" checked /> Branco</span
           >
-          <span><input type="radio" name="mdf" value="1.1" /> Amadeirado</span>
-          <span><input type="radio" name="mdf" value="1.3" /> Laqueado</span>
+          <span><input type="radio" name="mdf" value="1.2" /> Amadeirado</span>
+          <span><input type="radio" name="mdf" value="1.4" /> Laqueado</span>
         </div>
 
         <label>Cor do MDF:</label>
         <input type="text" id="cor" placeholder="Ex:Loiro Frejor - Arauco " />
 
         <label>Ferragens:</label>
-        <input type="text" id="Ferragem" placeholder="Ex: 2 gavetas,3 Portas" />
+        <input type="text" id="ferragem" placeholder="Ex: 2 gavetas,3 Portas" />
 
         <button type="submit">Calcular</button>
       </form>
@@ -47,6 +56,13 @@
       <div id="resultado"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/scripts.js"></script>
+
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="resultado-modal"></div>
+      </div>
+    </div>
   </body>
 </html>

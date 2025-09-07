@@ -84,3 +84,56 @@ button {
 button:hover {
   background: #6a948a;
 }
+/* --- ESTILOS DO POPUP (MODAL) --- */
+
+/* O fundo escuro que cobre a tela */
+.modal-overlay {
+  position: fixed; /* Fica fixo na tela mesmo com rolagem */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Cor preta com 70% de transparência */
+  
+  /* Usa flexbox para centralizar a caixa do popup */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Começa escondido por padrão */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Classe que será adicionada via JS para mostrar o modal */
+.modal-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* A caixa branca do popup */
+.modal-content {
+  background: #1e2a30; /* Mesma cor do container do form */
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px; /* Largura máxima do popup */
+  position: relative; /* Necessário para posicionar o botão de fechar */
+  color: #fff; /* Garante que o texto seja branco */
+}
+
+/* O botão 'X' para fechar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close-button:hover {
+  color: #ccc;
+}
