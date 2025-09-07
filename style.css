@@ -1,30 +1,86 @@
+
 body {
   font-family: Arial, sans-serif;
   background: #101820;
   color: #fff;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
   padding: 20px;
+  box-sizing: border-box;
+}.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px; 
+  margin-bottom: 30px; 
 }
+
+.logo {
+  height: 65px;
+  margin-right: 15px;
+  border-radius: 20%;
+  
+}
+
+.site-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+
 .container {
   background: #1e2a30;
-  padding: 20px;
+  padding: 30px;
   border-radius: 12px;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
 }
-input,button {
+
+
+.container h1 {
+  text-align: center; 
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+label {
   display: block;
-  margin: 18px 0;
-  padding: 8px;
-  width: 80%;
-  align-items: center;
-  border-radius: 10px;
-  border: none;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
+
+input[type="text"],
+input[type="number"],
+button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #E0E4E8; 
+  color:#1B232B; 
+}
+div.radio-group {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+}
+input[type="radio"] {
+  margin-right: 5px;
+}
+
 button {
   background: #52796F;
   color: white;
   font-weight: bold;
   cursor: pointer;
-  align-items: center;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background: #6a948a;
 }
