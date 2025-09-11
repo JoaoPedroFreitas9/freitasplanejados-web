@@ -1,3 +1,39 @@
+/* --- ESTILOS RESPONSIVOS --- */
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px; 
+  }
+
+  .site-header {
+    flex-direction: column; 
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 10px; 
+  }
+
+  .container {
+    padding: 20px; 
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .radio-group {
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 10px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -10,27 +46,26 @@ body {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
-}.site-header {
+}
+.site-header {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 600px; 
-  margin-bottom: 30px; 
+  max-width: 600px;
+  margin-bottom: 30px;
 }
 
 .logo {
   height: 65px;
   margin-right: 15px;
   border-radius: 20%;
-  
 }
 
 .site-title {
   font-size: 24px;
   margin: 0;
 }
-
 
 .container {
   background: #1e2a30;
@@ -41,9 +76,8 @@ body {
   box-sizing: border-box;
 }
 
-
 .container h1 {
-  text-align: center; 
+  text-align: center;
   margin-top: 0;
   margin-bottom: 25px;
 }
@@ -62,8 +96,8 @@ button {
   border-radius: 8px;
   border: none;
   box-sizing: border-box;
-  background-color: #E0E4E8; 
-  color:#1B232B; 
+  background-color: #e0e4e8;
+  color: #1b232b;
 }
 div.radio-group {
   margin-bottom: 20px;
@@ -75,7 +109,7 @@ input[type="radio"] {
 }
 
 button {
-  background: #52796F;
+  background: #52796f;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -84,46 +118,39 @@ button {
 button:hover {
   background: #6a948a;
 }
-/* --- ESTILOS DO POPUP (MODAL) --- */
 
-/* O fundo escuro que cobre a tela */
 .modal-overlay {
-  position: fixed; /* Fica fixo na tela mesmo com rolagem */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Cor preta com 70% de transparência */
-  
-  /* Usa flexbox para centralizar a caixa do popup */
+  background: rgba(0, 0, 0, 0.7);
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* Começa escondido por padrão */
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Classe que será adicionada via JS para mostrar o modal */
 .modal-overlay.show {
   visibility: visible;
   opacity: 1;
 }
 
-/* A caixa branca do popup */
 .modal-content {
-  background: #1e2a30; /* Mesma cor do container do form */
+  background: #1e2a30;
   padding: 30px;
   border-radius: 12px;
   width: 90%;
-  max-width: 500px; /* Largura máxima do popup */
-  position: relative; /* Necessário para posicionar o botão de fechar */
-  color: #fff; /* Garante que o texto seja branco */
+  max-width: 500px;
+  position: relative;
+  color: #fff;
 }
 
-/* O botão 'X' para fechar */
 .close-button {
   position: absolute;
   top: 10px;
